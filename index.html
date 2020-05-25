@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="control-panel">
+      <label for="sizeCell" id="l_sizeCell"></label>
+      <input
+        type="range"
+        min="20"
+        max="100"
+        step="5"
+        value="20"
+        name="sizeCell"
+        id="sizeCell"
+        oninput="inputChange('sizeCell')"
+      />
+      <label for="density" id="l_density"></label>
+      <input
+        type="range"
+        min="2"
+        max="10"
+        step="1"
+        value="5"
+        name="density"
+        id="density"
+        oninput="inputChange('density')"
+      />
+      <button onclick="start()">Старт</button>
+      <button onclick="stop()">Стоп</button>
+    </div>
+    <div class="game-field" id="game-field">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
