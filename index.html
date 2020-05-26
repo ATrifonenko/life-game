@@ -23,18 +23,19 @@
       <input
         type="range"
         min="2"
-        max="10"
+        max="15"
         step="1"
         value="5"
         name="density"
         id="density"
         oninput="inputChange('density')"
       />
-      <button onclick="start()">Старт</button>
-      <button onclick="stop()">Стоп</button>
+      <button onclick="start()">Старт/Продолжить</button>
+      <button onclick="pause()">Пауза</button>
+      <button onclick="stop()">Стоп/Очистить</button>
     </div>
     <div class="game-field" id="game-field">
-      <canvas id="canvas"></canvas>
+      <canvas onmousedown="manualDraw(event)" id="canvas"></canvas>
     </div>
     <script src="./js/index.js"></script>
   </body>
